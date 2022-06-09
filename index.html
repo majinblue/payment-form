@@ -40,9 +40,7 @@
           </li>
         </ul>
       </fieldset>
-      
-      <!-- A separate fieldset for the user's TEXT inputs -->
-      <fieldset>
+      <!-- A separate area for the user's TEXT inputs -->
         <p>
           <label for="name">
             <span>Name: </span>
@@ -64,7 +62,44 @@
           </label>
           <input type="password" id="pwd" name="password">
         </p>
-      </fieldset>
+    </section>
+
+     <!-- Payment Info Section -->
+    <section>
+      <h2>Payment Information</h2>
+      <!-- Card Type -->
+      <p>
+        <label for="card">
+          <span>Card type:</span>
+        </label>
+        <select name="usercard" id="card">
+          <option value="visa">Visa</option>
+          <option value="mc">MasterCard</option>
+          <option value="amex">American Express</option>
+        </select>
+      </p>
+      <!-- Card Number -->
+      <p>
+        <label for="number">
+          <span>Card Number</span>
+          <strong><abbr title="required">*</abbr></strong>
+        </label>
+        <input type="tel" id="number" name="cardnumber">
+      </p>
+      <!-- Expiration Date -->
+      <p>
+        <label for="expiration">
+          <span>Expiration Date:</span>
+          <strong><abbr title="required">*</abbr></strong>
+        </label>
+        <input type="text" id="expiration" required="true" placeholder="MM/YY" pattern="^(0[1-9]1[0-2])\/([0-9)]{2})$">
+      </p>
+    </section>
+    
+    <section>
+      <p>
+        <button type="submit">Validate the Payment</button>
+      </p>
     </section>
   </form>
 </body>
